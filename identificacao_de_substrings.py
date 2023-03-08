@@ -8,6 +8,3 @@ def identificar_repeticao(s1, s2):
             repeticao += 1
     
     return repeticao
-
-retorno = identificar_repeticao("banana", "na")
-print(retorno)

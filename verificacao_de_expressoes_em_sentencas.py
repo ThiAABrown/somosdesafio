@@ -1,5 +1,29 @@
 import json
 
+
+
+def obter_tokens(sentenca):
+    pontuacoes = [",", ".", "!", "?", ";", ":", "(", ")", "[", "]", "{", "}", "-", "/", "\\", "'", '"']
+
+    palavra = ""
+    tokens = []
+    for posicao in range(len(sentenca)):
+        if sentenca[posicao] not in pontuacoes and sentenca[posicao] != " ":
+            palavra += sentenca[posicao]
+        else:
+            if palavra:
+                tokens.append(palavra)
+                palavra = ""
+            if sentenca[posicao] in pontuacoes:
+                tokens.append(sentenca[posicao])
+
+    # Adicionar a última palavra à lista de tokens
+    if palavra:
+        tokens.append(palavra)
+
+    return tokens
+
+
 # 1 -ler o arquivo de expressões e guardar o resultado em uma lista
 with open('expressoes.txt', 'r') as expressoes_arquivo:
         expressoes = expressoes_arquivo.readlines()
@@ -31,6 +55,10 @@ for item in textos:
 
         for expressao in expressoes:
             expressao = expressao.replace('\n', '')
+            # --------
+            # tokens = obter_tokens(frase.lower())
+            # inicio_frase = " ".join(tokens[:3])  # 3 primeiros tokens
+            #__import__('ipdb').set_trace()
             if expressao.lower() in frase.lower():
                 sentenca_dict = {'sentença': frase, 'expressão': expressao}
                 sentencas.append(sentenca_dict)
