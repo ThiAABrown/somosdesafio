@@ -13,6 +13,3 @@ def validar_caracteres(string):
                 return False
     
     return len(lista) == 0
-
-retorno = validar_caracteres("(([{()}])))")
-print(retorno)
