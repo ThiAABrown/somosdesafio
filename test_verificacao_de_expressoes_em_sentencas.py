@@ -1,10 +1,9 @@
 from verificacao_de_expressoes_em_sentencas import verificar_expressao, obter_tokens
 
 def test_obter_tokens():
-    sentenca = " "
+    sentenca = 'Por conseguinte, é relevante adicionar que, sendo a cultura - associada às relações e experiências de vida do cidadão - um meio pelo qual se cria a construção da realidade na consciência dos jovens, a realidade que está sendo criada pelas vítimas pode refletir na decadência da sociedade brasileira, em termos de segurança, educação e até cultural.'
     tokens = obter_tokens(sentenca)
-
-    assert tokens == []
+    assert tokens == ['Por', 'conseguinte', ',', 'é', 'relevante', 'adicionar', 'que', ',', 'sendo', 'a', 'cultura', '-', 'associada', 'às', 'relações', 'e', 'experiências', 'de', 'vida', 'do', 'cidadão', '-', 'um', 'meio', 'pelo', 'qual', 'se', 'cria', 'a', 'construção', 'da', 'realidade', 'na', 'consciência', 'dos', 'jovens', ',', 'a', 'realidade', 'que', 'está', 'sendo', 'criada', 'pelas', 'vítimas', 'pode', 'refletir', 'na', 'decadência', 'da', 'sociedade', 'brasileira', ',', 'em', 'termos', 'de', 'segurança', ',', 'educação', 'e', 'até', 'cultural', '.']
 
 def test_verificar_expressao():
     output = verificar_expressao()
@@ -40,7 +39,7 @@ def test_verificar_expressao():
                 }, 
                 {
                 'sentença': 'Por conseguinte, é relevante adicionar que, sendo a cultura - associada às relações e experiências de vida do cidadão - um meio pelo qual se cria a construção da realidade na consciência dos jovens, a realidade que está sendo criada pelas vítimas pode refletir na decadência da sociedade brasileira, em termos de segurança, educação e até cultural.', 
-                'expressão': 'é relevante adicionar'
+                'expressão': None
                 }
             ]
         }

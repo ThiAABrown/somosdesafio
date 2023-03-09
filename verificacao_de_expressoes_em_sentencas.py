@@ -55,15 +55,17 @@ def verificar_expressao():
 
             for expressao in expressoes:
                 expressao = expressao.replace('\n', '')
-                # --------
-                # tokens = obter_tokens(frase.lower())
-                # inicio_frase = " ".join(tokens[:3])  # 3 primeiros tokens
-                #__import__('ipdb').set_trace()
+
                 if expressao.lower() in frase.lower():
-                    sentenca_dict = {'sentença': frase, 'expressão': expressao}
-                    sentencas.append(sentenca_dict)
-                    encontrou_expressao = True
-                    break
+                    tokens = obter_tokens(frase.lower())
+                    primeira_palavra_expressao = expressao.split()[0]
+                    primeiros_tokens = tokens[:3]
+                    
+                    if primeira_palavra_expressao in primeiros_tokens:
+                        sentenca_dict = {'sentença': frase, 'expressão': expressao}
+                        sentencas.append(sentenca_dict)
+                        encontrou_expressao = True
+                        break
 
             if not encontrou_expressao:
                 sentenca_dict = {'sentença': frase, 'expressão': None}
