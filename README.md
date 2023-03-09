@@ -18,13 +18,11 @@ pip install -r requirements.txt
 
 ### Problema 1 
 
-A resolução se encontra no arquivo identificacao_de_substrings.py
-Pode verificar sua funcionalidade com os testes.
+A resolução se encontra no arquivo identificacao_de_substrings.py, pode verificar sua funcionalidade com os testes.
 
 ### Problema 2
 
-A resolução se encontra no arquivo validacao_de_sequencia_de_caracteres.py
-Pode verificar sua funcionalidade com os testes.
+A resolução se encontra no arquivo validacao_de_sequencia_de_caracteres.py, pode verificar sua funcionalidade com os testes.
 
 ### Problema 3
 
