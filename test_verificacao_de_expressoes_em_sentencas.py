@@ -15,7 +15,7 @@ def test_verificar_expressao():
             'sentenças': [
                 {
                 'sentença': 'Em primeiro lugar, a forma atual de ensino, em que o aluno é obrigado a sentar-se em intervalos determinados pelos superiores, forma os adultos que levam essa forma de produção para o ofício.', 
-                'expressão': 'null'
+                'expressão': None
                 },
                 {
                 'sentença': 'Logo, baseado no que foi dito, vale citar o filósofo Pitágoras, que explica que é melhor educar bem as crianças do que ter que reeducá-las como adultos.', 
@@ -23,7 +23,7 @@ def test_verificar_expressao():
                 }, 
                 {
                 'sentença': 'Assim, os maus hábitos adquiridos na infância podem gerar, nos adultos, muitas complicações, já que dentro da sala de aula, a movimentação dos alunos pelo ambiente é repudiada e muitas vezes com consequências.', 
-                'expressão': 'null'
+                'expressão': None
                 }, 
                 {
                 'sentença': 'Como consequência, a doutrinação do modelo educacional não atende aos paradigmas de formação de um adulto atento à saúde ocupacional.', 'expressão': 'como consequência'
